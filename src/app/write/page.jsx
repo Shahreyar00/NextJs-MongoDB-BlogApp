@@ -3,12 +3,17 @@
 import React, { useState } from "react";
 import styles from "./writePage.module.css";
 import Image from "next/image";
-import { IoIosAdd } from "react-icons/io";
+import { IoAddOutline, IoImagesOutline } from "react-icons/io5";
+import { BsUpload, BsCameraVideoFill } from "react-icons/bs";
+import { AiOutlineClose } from "react-icons/ai";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.bubble.css";
+
 
 const WritePage = () => {
     const status = "not_loading";
 
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
     const [file, setFile] = useState(null);
     const [media, setMedia] = useState("");
     const [value, setValue] = useState("");
@@ -23,14 +28,24 @@ const WritePage = () => {
         router.push("/");
     }
 
+    const handleSubmit = async () => {
+        console.log('Handle submit!');
+    };
+
+
     return (
         <div className={styles.container}>
-            <input
-                type="text"
-                placeholder="Title..."
-                className={styles.input}
-                onChange={(e) => setTitle(e.target.value)}
-            />
+            <div className={styles.inputContainer}>
+                <input
+                    type="text"
+                    placeholder="Title..."
+                    className={styles.input}
+                    onChange={(e) => setTitle(e.target.value)}
+                />
+                <button className={styles.publish} onClick={handleSubmit}>
+                    Publish
+                </button>
+            </div>
             <select className={styles.select} onChange={(e) => setCatSlug(e.target.value)}>
                 <option value="style">Style</option>
                 <option value="fashion">Fashion</option>
@@ -41,7 +56,12 @@ const WritePage = () => {
             </select>
             <div className={styles.editor}>
                 <button className={styles.button} onClick={() => setOpen(!open)}>
-                    <IoIosAdd />
+                    {open === true ? (
+                        <AiOutlineClose />
+                    ) : (
+
+                        <IoAddOutline />
+                    )}
                 </button>
                 {open && (
                     <div className={styles.add}>
@@ -52,18 +72,23 @@ const WritePage = () => {
                             style={{ display: "none" }}
                         />
                         <button className={styles.addButton}>
-                            <label htmlFor="image">
-                                <Image src="/image.png" alt="" width={16} height={16} />
-                            </label>
+                            <IoImagesOutline />
                         </button>
                         <button className={styles.addButton}>
-                            <Image src="/external.png" alt="" width={16} height={16} />
+                            <BsUpload />
                         </button>
                         <button className={styles.addButton}>
-                            <Image src="/video.png" alt="" width={16} height={16} />
+                            <BsCameraVideoFill />
                         </button>
                     </div>
                 )}
+                <ReactQuill
+                    className={styles.textArea}
+                    theme="bubble"
+                    value={value}
+                    onChange={setValue}
+                    placeholder="Tell your story..."
+                />
             </div>
         </div>
     )

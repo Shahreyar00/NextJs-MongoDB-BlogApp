@@ -18,7 +18,7 @@ const CategoryList = () => {
                     />
                     style
                 </Link>
-                <Link href="/blog?cat=style" className={`${styles.category} ${styles.travel}`}>
+                <Link href="/blog?cat=travel" className={`${styles.category} ${styles.travel}`}>
                     <Image
                         src="/travel.png"
                         alt=""
@@ -28,7 +28,7 @@ const CategoryList = () => {
                     />
                     travel
                 </Link>
-                <Link href="/blog?cat=style" className={`${styles.category} ${styles.culture}`}>
+                <Link href="/blog?cat=culture" className={`${styles.category} ${styles.culture}`}>
                     <Image
                         src="/culture.png"
                         alt=""
@@ -38,7 +38,7 @@ const CategoryList = () => {
                     />
                     culture
                 </Link>
-                <Link href="/blog?cat=style" className={`${styles.category} ${styles.coding}`}>
+                <Link href="/blog?cat=coding" className={`${styles.category} ${styles.coding}`}>
                     <Image
                         src="/coding.png"
                         alt=""
@@ -48,7 +48,7 @@ const CategoryList = () => {
                     />
                     coding
                 </Link>
-                <Link href="/blog?cat=style" className={`${styles.category} ${styles.food}`}>
+                <Link href="/blog?cat=food" className={`${styles.category} ${styles.food}`}>
                     <Image
                         src="/food.png"
                         alt=""
@@ -58,7 +58,7 @@ const CategoryList = () => {
                     />
                     food
                 </Link>
-                <Link href="/blog?cat=style" className={`${styles.category} ${styles.fashion}`}>
+                <Link href="/blog?cat=fashion" className={`${styles.category} ${styles.fashion}`}>
                     <Image
                         src="/fashion.png"
                         alt=""
