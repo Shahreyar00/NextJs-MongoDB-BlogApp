@@ -8,10 +8,13 @@ import { BsUpload, BsCameraVideoFill } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.bubble.css";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 
 const WritePage = () => {
-    const status = "not_loading";
+    const { status } = useSession();
+    const router = useRouter();
 
     const [open, setOpen] = useState(false);
     const [file, setFile] = useState(null);
