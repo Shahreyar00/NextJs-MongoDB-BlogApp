@@ -1,6 +1,6 @@
 ### This repository contains code for Next.Js fullstack blog application.
 
-## Getting Started
+#### Getting Started
 
 First, run the development server:
 
