@@ -16,6 +16,15 @@ yarn dev
 * Category wise pages
 * Responsive
 
+* For the server side you have to add a (.env) file like:
+```
+MONGO_URL = Your mongo connect link
+GOOGLE_ID = Google id for login/signup
+NEXTAUTH_URL = http://localhost:3000
+NEXTAUTH_SECRET = Your secret key
+FIREBASE = Your firebase secret key
+```
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 ****
 ![screencapture-localhost-3000-2023-11-18-15_15_48](https://github.com/Shahreyar00/React_BlockchainWeb3_App/assets/70688937/5553e580-c556-4249-8f41-d6af41b0c3ff)
