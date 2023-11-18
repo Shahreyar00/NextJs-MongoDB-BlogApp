@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### This repository contains code for Next.Js fullstack blog application.
 
 ## Getting Started
 
@@ -9,6 +9,12 @@ npm run dev
 # or
 yarn dev
 ```
+
+#### Important features of the application:
+* SignUp/Login using google
+* Write new blogs and upload image with it
+* Category wise pages
+* Responsive
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 ****
